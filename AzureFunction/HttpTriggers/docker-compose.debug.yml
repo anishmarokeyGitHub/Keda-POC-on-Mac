@@ -1,0 +1,13 @@
+
+version: '3.4'
+
+services:
+  httptrigger:
+    image: httptrigger
+    build:
+      context: .
+      dockerfile: HttpTrigger/Dockerfile
+      args:
+        - configuration=Debug
+    volumes:
+      - ~/.vsdbg:/remote_debugger:rw
